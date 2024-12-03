@@ -1,4 +1,4 @@
 pandas
 matplotlib
-openai
+openai>=0.10.0
 streamlit
