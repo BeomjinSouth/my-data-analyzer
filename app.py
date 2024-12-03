@@ -13,7 +13,7 @@ st.title("Excel 데이터 분석 도구")
 
 # 세션 상태 초기화
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-4"
+    st.session_state["openai_model"] = "gpt-4o"
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
