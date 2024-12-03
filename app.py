@@ -27,3 +27,14 @@ if uploaded_file:
     if st.button("히스토그램 생성"):
         plt = plot_histogram(data, column_name)
         st.pyplot(plt)
+
+def generate_analysis_summary(data):
+    stream = client.chat.completions.create(
+        model=st.session_state["openai_model"],
+        messages=[
+            {"role": m["role"], "content": m["content"]}
+            for m in st.session_state.messages
+        ],
+        stream=True,
+    )
+        response = st.write_stream(stream)
