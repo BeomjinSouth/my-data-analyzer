@@ -3,6 +3,9 @@ import pandas as pd
 from utils.data_processing import create_frequency_table, create_stem_and_leaf
 from utils.visualization import plot_histogram
 from openai import OpenAI
+
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+
 st.title("Excel 데이터 분석 도구")
 uploaded_file = st.file_uploader("엑셀 파일을 업로드하세요", type=["xlsx", "csv"])
 
